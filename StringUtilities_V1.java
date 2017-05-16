@@ -36,9 +36,20 @@ class StringUtilities_V1
     {
       utilityChoice = utilityChoice.trim();
       String[] commandFind = utilityChoice.split("\\s+");
+      utilitySelect(Integer.parseInt(commandFind[0]));
+    }
+    catch (Exception e)
+    {
+
+    }
+    
+    try
+    {
+      utilityChoice = utilityChoice.trim();
+      String[] commandFind = utilityChoice.split("\\s+");
       if (commandFind[0].contains("des"))
       {
-        descriptionShow(Integer.parseInt(commandFind[1]));
+        descriptionShow(Integer.parseInt(commandFind[1])); 
       }
       else if (commandFind[0].contains("list"))
       {
@@ -48,13 +59,64 @@ class StringUtilities_V1
       {
         System.out.println("Invalid Command.");
       }
-      
     }
     catch (Exception e)
     {
       System.out.println("Invalid choice, command or number.");
     }
     
+  }
+  
+  public static void utilitySelect(int sel)
+  {
+    if (sel == 1)
+    {
+      // run count letters method
+    }
+    else if (sel == 2)
+    {
+      // run count words method 
+    }
+    else if (sel == 3)
+    {
+      // run capitalize every word method
+    }
+    else if (sel == 4)
+    {
+      // run reverse statement method
+    }
+    else if (sel == 5)
+    {
+      // run reverse letters method
+    }
+    else if (sel == 6)
+    {
+      // run reverse words method
+    }
+    else if (sel == 7)
+    {
+      // run alternate case method
+    }
+    else if (sel == 8)
+    {
+      // run letter frequency method
+    }
+    else if (sel == 9)
+    {
+      // run consonants vs vowels method
+    }
+    else if (sel == 10)
+    {
+      // run letters only method
+    }
+    else if (sel == 11)
+    {
+      // run search method
+    }
+    else if (sel == 12)
+    {
+      // run search & replace method
+    }
   }
   
   public static void descriptionShow(int des)
