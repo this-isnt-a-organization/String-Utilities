@@ -113,4 +113,99 @@ class StringUtilities_V1
     }
   }
   
+  // Method to count letters in a string (excluding spaces and punctuation) (Not done, Yassine)
+  public static void countLetters () {
+  
+  
+  
+  
+  }
+  
+  // Method to count words in a string (Not done, Denzel)
+  public static void countWords () {
+  
+  
+  
+  
+  }
+  
+  // Method to capitalize all words in a string (Not done, Yassine)
+  public static void capitalizeWords () {
+  
+  
+  
+  
+  }
+  
+  // Method to reverse the statement entirely (Not done, Yassine)
+  public static void reverseStatement () {
+  
+  
+  
+  
+  }
+  
+  // Method to reverse the letters in each word entirely but keep the words in the right order (Not done, Nabeel)
+  public static void reverseLetters () {
+  
+  
+  
+  
+  }
+  
+  // Method to reverse the words in each statement but keep the words' letters in the right order (Not done, Nabeel)
+  public static void reverseWords () {
+  
+  
+  
+  
+  }
+  
+  // Method to capitalize every 2nd letter, alternate casing ex.HeLlO (Not done, Nabeel)
+  public static void alternateCase () {
+  
+  
+  
+  
+  }
+  
+  // Method to analyze the statement and output the number of times a letter is a present (Not done, Nabeel)
+  public static void letterFrequency () {
+  
+  
+  
+  
+  }
+  
+  // Method to analyze the statement and determine how many consonants and how many vowels there are (Not done, Denzel)
+  public static void consOrVowel () {
+  
+  
+  
+  
+  }
+  
+  // Method to display the inputted statement whithout any spaces or punctuation (Not done, Yassine)
+  public static void lettersOnly () {
+  
+  
+  
+  
+  }
+  
+  // Method to find a specific letter or substring and output the full statement, indicating where that specific substring is (Not done, Denzel)
+  public static void search () {
+  
+  
+  
+  
+  }
+  
+  // Method to find a specific letter or substring and replace it with the a desired input and print out the statement with what was replaced (Not done, Denzel)
+  public static void searchAndReplace () {
+  
+  
+  
+  
+  }
 }
