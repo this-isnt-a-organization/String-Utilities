@@ -36,17 +36,6 @@ class StringUtilities_V1
     {
       utilityChoice = utilityChoice.trim();
       String[] commandFind = utilityChoice.split("\\s+");
-      utilitySelect(Integer.parseInt(commandFind[0]));
-    }
-    catch (Exception e)
-    {
-
-    }
-    
-    try
-    {
-      utilityChoice = utilityChoice.trim();
-      String[] commandFind = utilityChoice.split("\\s+");
       if (commandFind[0].contains("des"))
       {
         descriptionShow(Integer.parseInt(commandFind[1])); 
@@ -54,6 +43,10 @@ class StringUtilities_V1
       else if (commandFind[0].contains("list"))
       {
         utilList();
+      }
+      else if (commandFind[0].matches("\\d+"))
+      {
+        utilitySelect(Integer.parseInt(commandFind[0]));
       }
       else
       {
@@ -65,6 +58,70 @@ class StringUtilities_V1
       System.out.println("Invalid choice, command or number.");
     }
     
+  }
+  
+  public static void utilitySelect(int sel)
+  {
+    if (sel == 1)
+    {
+      // run count letters method
+      countLetters ();
+    }
+    else if (sel == 2)
+    {
+      // run count words method 
+      countWords ();
+    }
+    else if (sel == 3)
+    {
+      // run capitalize every word method
+      capitalizeWords ();
+    }
+    else if (sel == 4)
+    {
+      // run reverse statement method
+      reverseStatement ();
+    }
+    else if (sel == 5)
+    {
+      // run reverse letters method
+      reverseLetters ();
+    }
+    else if (sel == 6)
+    {
+      // run reverse words method
+      reverseWords ();
+    }
+    else if (sel == 7)
+    {
+      // run alternate case method
+      alternateCase ();
+    }
+    else if (sel == 8)
+    {
+      // run letter frequency method
+      letterFrequency ();
+    }
+    else if (sel == 9)
+    {
+      // run consonants vs vowels method
+      consOrVowel ();
+    }
+    else if (sel == 10)
+    {
+      // run letters only method
+      lettersOnly ();
+    }
+    else if (sel == 11)
+    {
+      // run search method
+      search ();
+    }
+    else if (sel == 12)
+    {
+      // run search & replace method
+      searchAndReplace ();
+    }
   }
   
   public static void utilitySelect(int sel)
