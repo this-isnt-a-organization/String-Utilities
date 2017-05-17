@@ -1,8 +1,7 @@
-class StringUtilities_V1
+class StringUtilities_V2
 {
   public static void main (String []args)
   {
-    utilList();
     while (true != false)
     {
       menu();
@@ -30,6 +29,7 @@ class StringUtilities_V1
   
   public static void menu ()
   {
+    utilList();
     String utilityChoice;
     utilityChoice = In.getString();
     try
@@ -65,50 +65,62 @@ class StringUtilities_V1
     if (sel == 1)
     {
       // run count letters method
+      countLetters(userInput());
     }
     else if (sel == 2)
     {
-      // run count words method 
+      // run count words method
+      countWords(userInput());
     }
     else if (sel == 3)
     {
       // run capitalize every word method
+      capitalizeWords(userInput());
     }
     else if (sel == 4)
     {
       // run reverse statement method
+      reverseStatement(userInput());
     }
     else if (sel == 5)
     {
       // run reverse letters method
+      reverseLetters(userInput());
     }
     else if (sel == 6)
     {
       // run reverse words method
+      reverseWords(userInput());
     }
     else if (sel == 7)
     {
       // run alternate case method
+      alternateCase(userInput());
     }
     else if (sel == 8)
     {
       // run letter frequency method
+      letterFrequency(userInput());
     }
     else if (sel == 9)
     {
       // run consonants vs vowels method
+      consOrVowel(userInput());
     }
     else if (sel == 10)
     {
       // run letters only method
+      lettersOnly(userInput());
     }
     else if (sel == 11)
     {
       // run search method
+      search(userInput());
     }
     else if (sel == 12)
     {
       // run search & replace method
+      searchAndReplace(userInput());
     }
   }
   
@@ -168,32 +180,41 @@ class StringUtilities_V1
     }
   }
   
+  // Method to search for a users input
+  public static String userInput () {
+    String userInput;
+    
+    System.out.println("Enter your statemement.");
+    userInput = In.getString();
+    
+    return userInput;
+  }
+  
   // Method to count letters in a string (excluding spaces and punctuation) (Not done, Yassine)
-  public static void countLetters () {
-      userStatement = userStatement.trim();
-      String userInput = userStatement.replaceAll("\\W+",""); // "\\W" takes out anything that is not a word character
-      // Including punctuation.
-      System.out.println ("Statement is: "+userInput.length()+" characters without spaces or punctuation.");
+  public static void countLetters (String userInput) {
+    System.out.println("Running count letters utility...");
+    userInput = userInput.trim(); // Trimming the entered input
+    userInput = userInput.replaceAll("\\W+",""); // "\\W" takes out anything that is not a word character including punctuation.
+    System.out.println ("The statement is " + userInput.length() + " characters without spaces or punctuation.\n");
   }
   
   // Method to count words in a string (Not done, Denzel)
-  public static void countWords () {
-  
+  public static void countWords (String userInput) {
+      System.out.println("Running count words utility...");
   
   
   
   }
   
   // Method to capitalize all words in a string (Not done, Yassine)
-  public static void capitalizeWords () {
-  
+  public static void capitalizeWords (String userInput) {
   
   
   
   }
   
   // Method to reverse the statement entirely (Not done, Yassine)
-  public static void reverseStatement () {
+  public static void reverseStatement (String userInput) {
   
   
   
@@ -201,7 +222,7 @@ class StringUtilities_V1
   }
   
   // Method to reverse the letters in each word entirely but keep the words in the right order (Not done, Nabeel)
-  public static void reverseLetters () {
+  public static void reverseLetters (String userInput) {
   
   
   
@@ -209,7 +230,7 @@ class StringUtilities_V1
   }
   
   // Method to reverse the words in each statement but keep the words' letters in the right order (Not done, Nabeel)
-  public static void reverseWords () {
+  public static void reverseWords (String userInput) {
   
   
   
@@ -217,7 +238,7 @@ class StringUtilities_V1
   }
   
   // Method to capitalize every 2nd letter, alternate casing ex.HeLlO (Not done, Nabeel)
-  public static void alternateCase () {
+  public static void alternateCase (String userInput) {
   
   
   
@@ -225,7 +246,7 @@ class StringUtilities_V1
   }
   
   // Method to analyze the statement and output the number of times a letter is a present (Not done, Nabeel)
-  public static void letterFrequency () {
+  public static void letterFrequency (String userInput) {
   
   
   
@@ -233,7 +254,7 @@ class StringUtilities_V1
   }
   
   // Method to analyze the statement and determine how many consonants and how many vowels there are (Not done, Denzel)
-  public static void consOrVowel () {
+  public static void consOrVowel (String userInput) {
   
   
   
@@ -241,7 +262,7 @@ class StringUtilities_V1
   }
   
   // Method to display the inputted statement whithout any spaces or punctuation (Not done, Yassine)
-  public static void lettersOnly () {
+  public static void lettersOnly (String userInput) {
   
   
   
@@ -249,7 +270,7 @@ class StringUtilities_V1
   }
   
   // Method to find a specific letter or substring and output the full statement, indicating where that specific substring is (Not done, Denzel)
-  public static void search () {
+  public static void search (String userInput) {
   
   
   
@@ -257,7 +278,7 @@ class StringUtilities_V1
   }
   
   // Method to find a specific letter or substring and replace it with the a desired input and print out the statement with what was replaced (Not done, Denzel)
-  public static void searchAndReplace () {
+  public static void searchAndReplace (String userInput) {
   
   
   
