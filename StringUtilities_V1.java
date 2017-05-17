@@ -170,10 +170,6 @@ class StringUtilities_V1
   
   // Method to count letters in a string (excluding spaces and punctuation) (Not done, Yassine)
   public static void countLetters () {
-      String userStatement ;
-      
-      System.out.println ("Please enter a statement");
-      userStatement = In.getString ();
       userStatement = userStatement.trim();
       String userInput = userStatement.replaceAll("\\W+",""); // "\\W" takes out anything that is not a word character
       // Including punctuation.
