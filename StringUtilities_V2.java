@@ -201,7 +201,17 @@ class StringUtilities_V2
   // Method to count words in a string (Not done, Denzel)
   public static void countWords (String userInput) {
       System.out.println("Running count words utility...");
-  
+      int wordCount = 0;
+      System.out.println("Running count words utility...");
+      String[] wordCounter = userInput.split("\\s+");
+      for (int c = 0; c <= wordCounter.length - 1; c++)
+      {
+        if (wordCounter[c].matches("[a-zA-Z]{2,}|[aA]{1}|[a-zA-Z]{2,}[!.()-&]"))
+        {
+          wordCount++; 
+        }
+      }
+      System.out.println("This String contains " + wordCount + " possible words.");
   
   
   }
