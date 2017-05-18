@@ -288,12 +288,13 @@ class StringUtilities_V2
   
   }
   
-  // Method to display the inputted statement whithout any spaces or punctuation (Not done, Yassine)
+  // Method to display the inputted statement whithout any spaces or punctuation.
   public static void lettersOnly (String userInput) {
-  
-  
-  
-  
+        String userStatement;
+    
+        String userStatement = userInput.replaceAll("\\W+",""); // "\\W" takes out anything that is not a word character
+      // including punctuation.
+      System.out.println ("Statement is: "+userStatement.length()+" characters without spaces or punctuation.");
   }
   
   // Method to find a specific letter or substring and output the full statement, indicating where that specific substring is (Not done, Denzel)
