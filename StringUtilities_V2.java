@@ -232,10 +232,15 @@ class StringUtilities_V2
   
   // Method to reverse the letters in each word entirely but keep the words in the right order (Not done, Nabeel)
   public static void reverseLetters (String userInput) {
-  
-  
-  
-  
+    int arrayLength = userInput.split("\\W").length; // Integer for the number of words that are in the statement
+    System.out.println("The reversed letters in each word for the statement would be.");
+    for (int i=0; i<arrayLength; i++) {
+      for (int x=(userInput.split("\\W")[i].length() - 1); x>=0; x--) {
+        System.out.print(userInput.split("\\W")[i].charAt(x)); // Prints the character at index x of string, goes from back to front to reverse it
+      }
+      System.out.print(" "); // After reversing every words, adds a space for the next word
+    }
+    System.out.println("\n\n");
   }
   
   // Method to reverse the words in each statement but keep the words' letters in the right order (Not done, Nabeel)
