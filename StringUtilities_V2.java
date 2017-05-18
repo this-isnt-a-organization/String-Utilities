@@ -198,9 +198,8 @@ class StringUtilities_V2
     System.out.println ("The statement is " + userInput.length() + " characters without spaces or punctuation.\n");
   }
   
-  // Method to count words in a string (Not done, Denzel)
+  // Method to count words in a string (Compeleted, Denzel)
   public static void countWords (String userInput) {
-      System.out.println("Running count words utility...");
       int wordCount = 0;
       System.out.println("Running count words utility...");
       String[] wordCounter = userInput.split("\\s+");
