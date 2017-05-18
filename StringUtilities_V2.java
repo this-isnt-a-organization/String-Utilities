@@ -246,10 +246,13 @@ class StringUtilities_V2
   
   // Method to reverse the words in each statement but keep the words' letters in the right order (Not done, Nabeel)
   public static void reverseWords (String userInput) {
-  
-  
-  
-  
+    int arrayLength = userInput.split("\\W").length; // Integer for the number of words that are in the statement
+    System.out.println("The reversed words for the statement would be.");
+    for (int i=(arrayLength - 1); i>=0; i--) {
+      System.out.print(userInput.split("\\W")[i]);
+      System.out.print(" "); // After reversing a word, adds a space for the next word
+    }
+    System.out.println("\n\n");
   }
   
   // Method to capitalize every 2nd letter, alternate casing ex.HeLlO (Not done, Nabeel)
