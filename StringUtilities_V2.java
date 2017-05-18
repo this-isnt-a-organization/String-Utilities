@@ -30,6 +30,7 @@ class StringUtilities_V2
   
   public static void menu ()
   {
+    System.out.println("Select a utility. Enter list for the list.");
     String utilityChoice;
     utilityChoice = In.getString();
     try
@@ -297,12 +298,31 @@ class StringUtilities_V2
       System.out.println ("Statement is: "+userStatement.length()+" characters without spaces or punctuation.");
   }
   
-  // Method to find a specific letter or substring and output the full statement, indicating where that specific substring is (Not done, Denzel)
+  // Method to find a specific letter or substring and output the full statement, indicating where that specific substring is (done, Denzel)
   public static void search (String userInput) {
-  
-  
-  
-  
+    String searchFor;
+    String foundPlaces = "";
+    int foundSub = -1;
+    System.out.println("What would you like to find in the subsring?");
+    searchFor = In.getString();
+    foundSub = userInput.indexOf(searchFor);
+    
+    if (foundSub > -1)
+    {
+      System.out.println("An \"~\" was marked at the correct location(s).");
+      String[] splitFound = userInput.split(searchFor);
+      for (int c = 0; c <= splitFound.length - 1; c++)
+      {
+          foundPlaces = foundPlaces.concat(splitFound[c] + searchFor + "~ ");
+          foundPlaces = foundPlaces.trim();
+      }  
+      foundPlaces = foundPlaces.substring(0,(foundPlaces.length() - (searchFor.length() + 1)));
+      System.out.println(foundPlaces);
+    }
+    else
+    {
+      System.out.println(searchFor + " was not found.");
+    }
   }
   
   // Method to find a specific letter or substring and replace it with the a desired input and print out the statement with what was replaced (Not done, Denzel)
