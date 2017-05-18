@@ -215,11 +215,20 @@ class StringUtilities_V2
   
   }
   
-  // Method to capitalize all words in a string (Not done, Yassine)
+  // Method to capitalize all words in a string
   public static void capitalizeWords (String userInput) {
+      System.out.println ("Please enter a statement");
+  userInput=In.getString ();
+   
+  String [] userStatement = userInput.split("\\s"); //the statement will only split when there's a space because of "\\s"
+  userInput = "";
   
-  
-  
+    for (int i=0; i<userStatement.length; i++){ //For loop created to read the length of each word in the statement.
+    char capLetter = Character.toUpperCase(userStatement[i].charAt(0)); // giving capLetter the function of capitalizing the first letter of a word.
+    userInput+=" "+ capLetter + userStatement[i].substring(1); //This will look at the length of each word
+    }
+  userInput = userInput.trim();
+  System.out.print(userInput+"\n");
   }
   
   // Method to reverse the statement entirely (Not done, Yassine)
