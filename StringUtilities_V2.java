@@ -237,8 +237,9 @@ class StringUtilities_V2
     for (int i=0; i<arrayLength; i++) {
       for (int x=(userInput.split("\\W")[i].length() - 1); x>=0; x--) {
         System.out.print(userInput.split("\\W")[i].charAt(x)); // Prints the character at index x of string, goes from back to front to reverse it
+        // This can also be done by using .substring method to print out each letter.
       }
-      System.out.print(" "); // After reversing every words, adds a space for the next word
+      System.out.print(" "); // After reversing every letter in the word, adds a space for the next word
     }
     System.out.println("\n\n");
   }
