@@ -2,6 +2,7 @@ class StringUtilities_V2
 {
   public static void main (String []args)
   {
+    utilList();
     while (true != false)
     {
       menu();
@@ -29,7 +30,6 @@ class StringUtilities_V2
   
   public static void menu ()
   {
-    utilList();
     String utilityChoice;
     utilityChoice = In.getString();
     try
