@@ -267,10 +267,21 @@ class StringUtilities_V2
   
   // Method to capitalize every 2nd letter, alternate casing ex.HeLlO (Not done, Nabeel)
   public static void alternateCase (String userInput) {
-  
-  
-  
-  
+    int arrayLength = userInput.split("\\W").length; // Integer for the number of words that are in the statement
+    for (int i=0; i<userInput.length(); i++) {
+      if (userInput.charAt(i) >= 97 && userInput.charAt(i) <= 122 || userInput.charAt(i) >= 65 && userInput.charAt(i) <= 90) {
+        if ((i%2)==0) { // If the number is even (shown by the mod 2 of the number being 0) capitalises the letter
+          System.out.print(userInput.substring(i,i+1).toUpperCase());
+        }
+        else { // If it's odd, keeps in minuscule
+          System.out.print(userInput.substring.toLowerCase(i,i+1));
+        }
+      }
+      else { // If it's not a letter, just prints the char
+        System.out.print(userInput.substring(i,i+1));
+      }
+    }
+      System.out.println("\n"); // Printing blank lines
   }
   
   // Method to analyze the statement and output the number of times a letter is a present (Not done, Nabeel)
