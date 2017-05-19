@@ -293,7 +293,37 @@ class StringUtilities_V2
   
   // Method to analyze the statement and determine how many consonants and how many vowels there are (Not done, Denzel)
   public static void consOrVowel (String userInput) {
-  
+     // WORK IN PROGRESS
+  /* public static void consOrVowel (String userInput) {
+    int spaceCount = 0;
+    int punCount = 0;
+    int consCount = 0;
+    int vowelsCount = 0;
+    for (int i = 0; i <= userInput.length() - 1; i++)
+    {
+      if (userInput.substring(i,i).matches("\\s+"))
+      {
+        spaceCount++;
+      }
+      else if (userInput.substring(i,i).matches("[BCDFGHJKLMNPQRSTVWXYZbcdfghjklmnpqrstvwxyz]"))
+      {
+        consCount++;
+      }
+      else if (userInput.substring(i,i).matches("[AEIOU]||[aeiou]"))
+      {
+        vowelsCount++;
+      }
+      else if (userInput.substring(i,i).matches("['()[]:,-_!.?\"';/*@\\~#]"))
+      {
+        punCount++;
+      }
+    }
+    
+    System.out.println("Spaces Found: " + spaceCount);
+    System.out.println("Punctuation Found: " + punCount);
+    System.out.println("Consonants Found: " + consCount);
+    System.out.println("Vowels Found: " + vowelsCount);
+  */
   
   
   
