@@ -293,7 +293,7 @@ class StringUtilities_V2
   public static void lettersOnly (String userInput) {
         String userStatement;
     
-        String userStatement = userInput.replaceAll("\\W+",""); // "\\W" takes out anything that is not a word character
+        userStatement = userInput.replaceAll("\\W+",""); // "\\W" takes out anything that is not a word character
       // including punctuation.
       System.out.println ("Statement is: "+userStatement.length()+" characters without spaces or punctuation.");
   }
