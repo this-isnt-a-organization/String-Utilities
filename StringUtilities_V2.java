@@ -343,7 +343,7 @@ class StringUtilities_V2
     else
     {
       System.out.println("Old Statement: " + userInput);
-      System.out.println("New Statement: " + newStatement);
+      System.out.println("New Statement: " + newStatement + "\n");
     }
     
   }
