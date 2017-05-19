@@ -325,11 +325,26 @@ class StringUtilities_V2
     }
   }
   
-  // Method to find a specific letter or substring and replace it with the a desired input and print out the statement with what was replaced (Not done, Denzel)
+  // Method to find a specific letter or substring and replace it with the a desired input and print out the statement with what was replaced (Completed)
   public static void searchAndReplace (String userInput) {
-  
-  
-  
-  
+    String searchFor;
+    String replaceWith;
+    String newStatement;
+    System.out.println("What would you like to find in the string?");
+    searchFor = In.getString();
+    System.out.println("What would you like to replace it with?");
+    replaceWith = In.getString();
+    newStatement = userInput.replaceAll(searchFor,replaceWith);
+    
+    if (userInput.equals(newStatement))
+    {
+      System.out.println("\"" + searchFor + "\" was not found." );
+    }
+    else
+    {
+      System.out.println("Old Statement: " + userInput);
+      System.out.println("New Statement: " + newStatement);
+    }
+    
   }
 }
