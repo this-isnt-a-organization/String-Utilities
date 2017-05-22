@@ -277,18 +277,204 @@ class StringUtilities_V2
   
   // Method to capitalize every 2nd letter, alternate casing ex.HeLlO (Not done, Nabeel)
   public static void alternateCase (String userInput) {
-  
-  
-  
-  
+    int arrayLength = userInput.split("\\W").length; // Integer for the number of words that are in the statement
+    for (int i=0; i<userInput.length(); i++) {
+      if (userInput.charAt(i) >= 97 && userInput.charAt(i) <= 122 || userInput.charAt(i) >= 65 && userInput.charAt(i) <= 90) {
+        if ((i%2)==0) {
+          System.out.print(userInput.substring(i,i+1).toUpperCase());
+        }
+        else {
+          System.out.print(userInput.substring(i,i+1));
+        }
+      }
+      else {
+        System.out.print(userInput.substring(i,i+1));
+      }
+    }
+      System.out.println("\n"); // Printing blank lines
   }
   
   // Method to analyze the statement and output the number of times a letter is a present (Not done, Nabeel)
   public static void letterFrequency (String userInput) {
-  
-  
-  
-  
+    int lowerLetterFreq[] = new int[26]; // Array of ints for the number of times a lowercase letter is seen (0=a,...,etc)
+    int upperLetterFreq[] = new int[26]; // Array of ints for the number of times an uppercase letter is seen (0=A,...,etc)
+    // For loop for uppercase letters with selection statements to find freq
+    for (int i=0; i<userInput.length(); i++) {
+      if (userInput.charAt(i) == 65) {
+        upperLetterFreq[0]++;
+      }
+      else if (userInput.charAt(i) == 66) {
+        upperLetterFreq[1]++;
+      }
+      else if (userInput.charAt(i) == 67) {
+        upperLetterFreq[2]++;
+      }
+      else if (userInput.charAt(i) == 68) {
+        upperLetterFreq[3]++;
+      }
+      else if (userInput.charAt(i) == 69) {
+        upperLetterFreq[4]++;
+      }
+      else if (userInput.charAt(i) == 70) {
+        upperLetterFreq[5]++;
+      }
+      else if (userInput.charAt(i) == 71) {
+        upperLetterFreq[6]++;
+      }
+      else if (userInput.charAt(i) == 72) {
+        upperLetterFreq[7]++;
+      }
+      else if (userInput.charAt(i) == 73) {
+        upperLetterFreq[8]++;
+      }
+      else if (userInput.charAt(i) == 74) {
+        upperLetterFreq[9]++;
+      }
+      else if (userInput.charAt(i) == 75) {
+        upperLetterFreq[10]++;
+      }
+      else if (userInput.charAt(i) == 76) {
+        upperLetterFreq[11]++;
+      }
+      else if (userInput.charAt(i) == 77) {
+        upperLetterFreq[12]++;
+      }
+      else if (userInput.charAt(i) == 78) {
+        upperLetterFreq[13]++;
+      }
+      else if (userInput.charAt(i) == 79) {
+        upperLetterFreq[14]++;
+      }
+      else if (userInput.charAt(i) == 80) {
+        upperLetterFreq[15]++;
+      }
+      else if (userInput.charAt(i) == 81) {
+        upperLetterFreq[16]++;
+      }
+      else if (userInput.charAt(i) == 82) {
+        upperLetterFreq[17]++;
+      }
+      else if (userInput.charAt(i) == 83) {
+        upperLetterFreq[18]++;
+      }
+      else if (userInput.charAt(i) == 84) {
+        upperLetterFreq[19]++;
+      }
+      else if (userInput.charAt(i) == 85) {
+        upperLetterFreq[20]++;
+      }
+      else if (userInput.charAt(i) == 86) {
+        upperLetterFreq[21]++;
+      }
+      else if (userInput.charAt(i) == 87) {
+        upperLetterFreq[22]++;
+      }
+      else if (userInput.charAt(i) == 88) {
+        upperLetterFreq[23]++;
+      }
+      else if (userInput.charAt(i) == 89) {
+        upperLetterFreq[24]++;
+      }
+      else if (userInput.charAt(i) == 90) {
+        upperLetterFreq[25]++;
+      }
+    }
+    // For loop for lowercase letters with selection statements to find freq
+    for (int i=0; i<userInput.length(); i++) {
+      if (userInput.charAt(i) == 97) {
+        lowerLetterFreq[0]++;
+      }
+      else if (userInput.charAt(i) == 98) {
+        lowerLetterFreq[1]++;
+      }
+      else if (userInput.charAt(i) == 99) {
+        lowerLetterFreq[2]++;
+      }
+      else if (userInput.charAt(i) == 100) {
+        lowerLetterFreq[3]++;
+      }
+      else if (userInput.charAt(i) == 101) {
+        lowerLetterFreq[4]++;
+      }
+      else if (userInput.charAt(i) == 102) {
+        lowerLetterFreq[5]++;
+      }
+      else if (userInput.charAt(i) == 103) {
+        lowerLetterFreq[6]++;
+      }
+      else if (userInput.charAt(i) == 104) {
+        lowerLetterFreq[7]++;
+      }
+      else if (userInput.charAt(i) == 105) {
+        lowerLetterFreq[8]++;
+      }
+      else if (userInput.charAt(i) == 106) {
+        lowerLetterFreq[9]++;
+      }
+      else if (userInput.charAt(i) == 107) {
+        lowerLetterFreq[10]++;
+      }
+      else if (userInput.charAt(i) == 108) {
+        lowerLetterFreq[11]++;
+      }
+      else if (userInput.charAt(i) == 109) {
+        lowerLetterFreq[12]++;
+      }
+      else if (userInput.charAt(i) == 110) {
+        lowerLetterFreq[13]++;
+      }
+      else if (userInput.charAt(i) == 111) {
+        lowerLetterFreq[14]++;
+      }
+      else if (userInput.charAt(i) == 112) {
+        lowerLetterFreq[15]++;
+      }
+      else if (userInput.charAt(i) == 113) {
+        lowerLetterFreq[16]++;
+      }
+      else if (userInput.charAt(i) == 114) {
+        lowerLetterFreq[17]++;
+      }
+      else if (userInput.charAt(i) == 115) {
+        lowerLetterFreq[18]++;
+      }
+      else if (userInput.charAt(i) == 116) {
+        lowerLetterFreq[19]++;
+      }
+      else if (userInput.charAt(i) == 117) {
+        lowerLetterFreq[20]++;
+      }
+      else if (userInput.charAt(i) == (118)) {
+        lowerLetterFreq[21]++;
+      }
+      else if (userInput.charAt(i) == 119) {
+        lowerLetterFreq[22]++;
+      }
+      else if (userInput.charAt(i) == 120) {
+        lowerLetterFreq[23]++;
+      }
+      else if (userInput.charAt(i) == 121) {
+        lowerLetterFreq[24]++;
+      }
+      else if (userInput.charAt(i) == 122) {
+        lowerLetterFreq[25]++;
+      }
+    }
+    char upperCase = 65; // char variable to print out which characters are present (upperCase letters)
+    char lowerCase = 97; // char variable to print out which characters are present (lowerCase letters)
+    System.out.printf("%-10s%s%n", "Letter", "Number of times present"); // Printf to print the headers of the table
+    for (int i=0; i<26; i++) { // Loop that outputs the frequency of upperCase letters
+      if (upperLetterFreq[i]>0) {
+        System.out.printf("%-10c%d%n", upperCase + i, upperLetterFreq[i]);
+      }
+    }
+    for (int i=0; i<26; i++) { // Loop that outputs the frequency of lowerCase letters
+      if (lowerLetterFreq[i]>0) {
+        System.out.printf("%-10c%d%n", lowerCase + i, lowerLetterFreq[i]);
+      }
+    }
+    
+    
   }
   
   // Method to analyze the statement and determine how many consonants and how many vowels there are (Not done, Denzel)
