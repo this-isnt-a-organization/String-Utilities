@@ -188,7 +188,7 @@ class StringUtilities_V2
     System.out.println("Enter your statemement.");
     userInput = In.getString();
     
-    return userInput;
+    return userInput.trim();
   }
   
   // Method to count letters in a string (excluding spaces and punctuation) (Not done, Yassine)
