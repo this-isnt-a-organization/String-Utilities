@@ -191,7 +191,7 @@ class StringUtilities_V2
     return userInput.trim();
   }
   
-  // Method to count letters in a string (excluding spaces and punctuation) (Not done, Yassine)
+  // Method to count letters in a string (excluding spaces and punctuation) (Completed, Yassine)
   public static void countLetters (String userInput) {
     System.out.println("Running count letters utility...");
     userInput = userInput.trim(); // Trimming the entered input
@@ -216,41 +216,29 @@ class StringUtilities_V2
   
   }
   
-  // Method to capitalize all words in a string
+  // Method to capitalize all words in a string (Completed, Yassine)
   public static void capitalizeWords (String userInput) {
-      System.out.println ("Please enter a statement");
-  userInput=In.getString ();
-   
-  String [] userStatement = userInput.split("\\s"); //the statement will only split when there's a space because of "\\s"
-  userInput = "";
-  
+    String [] userStatement = userInput.split("\\s"); //the statement will only split when there's a space because of "\\s"
+    userInput = "";
     for (int i=0; i<userStatement.length; i++){ //For loop created to read the length of each word in the statement.
     char capLetter = Character.toUpperCase(userStatement[i].charAt(0)); // giving capLetter the function of capitalizing the first letter of a word.
     userInput+=" "+ capLetter + userStatement[i].substring(1); //This will look at the length of each word
     }
-  userInput = userInput.trim();
-  System.out.print(userInput+"\n");
+    userInput = userInput.trim();
+    System.out.print(userInput+"\n");
   }
   
-  // Method to reverse the statement entirely
+  // Method to reverse the statement entirely (Completed, Yassine)
   public static void reverseStatement (String userInput) {
      String inputReversed;
-    
     inputReversed = "";
-    
-    System.out.println ("Please enter a statement");
-    userInput = In.getString ();
-    userInput = userInput.trim ();
-    
-    for (int i=(userInput.length()-1); i>=0; i--){
-      
+    for (int i=(userInput.length()-1); i>=0; i--) {
       inputReversed = inputReversed+userInput.charAt(i); //Appending inputReversed with userInput so there can be an output.
-    
     }
     System.out.println (inputReversed); //Outputs the reversed statement
   }
   
-  // Method to reverse the letters in each word entirely but keep the words in the right order (Not done, Nabeel)
+  // Method to reverse the letters in each word entirely but keep the words in the right order (Completed, Nabeel)
   public static void reverseLetters (String userInput) {
     int arrayLength = userInput.split("\\W").length; // Integer for the number of words that are in the statement
     System.out.println("The reversed letters in each word for the statement would be.");
@@ -264,7 +252,7 @@ class StringUtilities_V2
     System.out.println("\n\n");
   }
   
-  // Method to reverse the words in each statement but keep the words' letters in the right order (Not done, Nabeel)
+  // Method to reverse the words in each statement but keep the words' letters in the right order (Completed, Nabeel)
   public static void reverseWords (String userInput) {
     int arrayLength = userInput.split("\\W").length; // Integer for the number of words that are in the statement
     System.out.println("The reversed words for the statement would be.");
@@ -275,7 +263,7 @@ class StringUtilities_V2
     System.out.println("\n\n");
   }
   
-  // Method to capitalize every 2nd letter, alternate casing ex.HeLlO (Not done, Nabeel)
+  // Method to capitalize every 2nd letter, alternate casing ex.HeLlO (Completed, Nabeel)
   public static void alternateCase (String userInput) {
     int arrayLength = userInput.split("\\W").length; // Integer for the number of words that are in the statement
     for (int i=0; i<userInput.length(); i++) {
@@ -294,7 +282,7 @@ class StringUtilities_V2
       System.out.println("\n"); // Printing blank lines
   }
   
-  // Method to analyze the statement and output the number of times a letter is a present (Not done, Nabeel)
+  // Method to analyze the statement and output the number of times a letter is a present (Completed, Nabeel)
   public static void letterFrequency (String userInput) {
     int lowerLetterFreq[] = new int[26]; // Array of ints for the number of times a lowercase letter is seen (0=a,...,etc)
     int upperLetterFreq[] = new int[26]; // Array of ints for the number of times an uppercase letter is seen (0=A,...,etc)
@@ -477,7 +465,7 @@ class StringUtilities_V2
     
   }
   
-  // Method to analyze the statement and determine how many consonants and how many vowels there are (Not done, Denzel)
+  // Method to analyze the statement and determine how many consonants and how many vowels there are (Completed, Denzel)
   public static void consOrVowel (String userInput) {
     int spaceCount = 0;
     int punCount = 0;
@@ -513,7 +501,7 @@ class StringUtilities_V2
   
   }
   
-  // Method to display the inputted statement whithout any spaces or punctuation.
+  // Method to display the inputted statement whithout any spaces or punctuation. (Completed, Yassine)
   public static void lettersOnly (String userInput) {
         String userStatement;
     
@@ -522,7 +510,7 @@ class StringUtilities_V2
       System.out.println ("Statement is: "+userStatement.length()+" characters without spaces or punctuation.");
   }
   
-  // Method to find a specific letter or substring and output the full statement, indicating where that specific substring is (done, Denzel)
+  // Method to find a specific letter or substring and output the full statement, indicating where that specific substring is (Completed, Denzel)
   public static void search (String userInput) {
     String searchFor;
     String foundPlaces = "";
@@ -549,7 +537,7 @@ class StringUtilities_V2
     }
   }
   
-  // Method to find a specific letter or substring and replace it with the a desired input and print out the statement with what was replaced (Completed)
+  // Method to find a specific letter or substring and replace it with the a desired input and print out the statement with what was replaced (Completed, Denzel)
   public static void searchAndReplace (String userInput) {
     String searchFor;
     String replaceWith;
