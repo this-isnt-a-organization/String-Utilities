@@ -204,9 +204,9 @@ class StringUtilities_V2
       int wordCount = 0;
       System.out.println("Running count words utility...");
       String[] wordCounter = userInput.split("\\s+");
-      for (int c = 0; c <= wordCounter.length - 1; c++)
+      for (int c = 0; c < wordCounter.length; c++)
       {
-        if (wordCounter[c].matches("[a-zA-Z]{2,}|[aA]{1}|[a-zA-Z]{2,}[!.()-&]"))
+        if (wordCounter[c].matches("[a-zA-Z]{2,}|[aA]{1}|[a-zA-Z]{2,}[!.()&]"))
         {
           wordCount++; 
         }
@@ -485,7 +485,7 @@ class StringUtilities_V2
       {
         vowelsCount++;
       }
-      else if (userInput.substring(i,i+1).matches("['():,-_!.?\"';/*@~#]"))
+      else if (userInput.substring(i,i+1).matches("['():,_!.?\"';/*@~#]"))
       {
         punCount++;
       }
