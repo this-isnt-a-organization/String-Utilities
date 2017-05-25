@@ -66,61 +66,73 @@ class StringUtilities_V2
     if (sel == 1)
     {
       // run count letters method
+      System.out.println("Running count letters utility...");
       countLetters(userInput());
     }
     else if (sel == 2)
     {
       // run count words method
+      System.out.println("Running count words utility...");
       countWords(userInput());
     }
     else if (sel == 3)
     {
       // run capitalize every word method
+      System.out.println("Running capitalize letters utility...");
       capitalizeWords(userInput());
     }
     else if (sel == 4)
     {
       // run reverse statement method
+      System.out.println("Running reverse statement utility...");
       reverseStatement(userInput());
     }
     else if (sel == 5)
     {
       // run reverse letters method
+      System.out.println("Running reverse letters utility...");
       reverseLetters(userInput());
     }
     else if (sel == 6)
     {
       // run reverse words method
+      System.out.println("Running reverse words utility...");
       reverseWords(userInput());
     }
     else if (sel == 7)
     {
       // run alternate case method
+      System.out.println("Running alternate case utility...");
       alternateCase(userInput());
     }
     else if (sel == 8)
     {
       // run letter frequency method
+      System.out.println("Running letter frequency utility...");
       letterFrequency(userInput());
     }
     else if (sel == 9)
     {
       // run consonants vs vowels method
+      System.out.println("Running consonant and vowel utility...");
       consOrVowel(userInput());
     }
     else if (sel == 10)
     {
       // run letters only method
+      System.out.println("Running letters only utility...");
       lettersOnly(userInput());
     }
     else if (sel == 11)
     {
       // run search method
+      System.out.println("Running search utility...");
       search(userInput());
     }
     else if (sel == 12)
     {
       // run search & replace method
+      System.out.println("Running search and replace utility...");
       searchAndReplace(userInput());
     }
   }
@@ -193,8 +205,6 @@ class StringUtilities_V2
   
   // Method to count letters in a string (excluding spaces and punctuation) (Completed, Yassine)
   public static void countLetters (String userInput) {
-    System.out.println("Running count letters utility...");
-    userInput = userInput.trim(); // Trimming the entered input
     userInput = userInput.replaceAll("\\W+",""); // "\\W" takes out anything that is not a word character including punctuation.
     System.out.println ("The statement is " + userInput.length() + " characters without spaces or punctuation.\n");
   }
@@ -202,7 +212,6 @@ class StringUtilities_V2
   // Method to count words in a string (Compeleted, Denzel)
   public static void countWords (String userInput) {
       int wordCount = 0;
-      System.out.println("Running count words utility...");
       String[] wordCounter = userInput.split("\\s+");
       for (int c = 0; c < wordCounter.length; c++)
       {
@@ -498,10 +507,6 @@ class StringUtilities_V2
     System.out.println("Punctuation Found: " + punCount);
     System.out.println("Consonants Found: " + consCount);
     System.out.println("Vowels Found: " + vowelsCount);
-
-  
-  
-  
   }
   
   // Method to display the inputted statement whithout any spaces or punctuation. (Completed, Yassine)
