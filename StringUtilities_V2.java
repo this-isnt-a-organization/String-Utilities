@@ -479,30 +479,31 @@ class StringUtilities_V2
   
   // Method to analyze the statement and determine how many consonants and how many vowels there are (Completed, Denzel)
   public static void consOrVowel (String userInput) {
-    int spaceCount = 0;
+    int spaceCount = 0; // varibles for holding the character counts
     int punCount = 0;
     int consCount = 0;
     int vowelsCount = 0;
-    for (int i = 0; i <= userInput.length() - 1; i++)
+    for (int i = 0; i <= userInput.length() - 1; i++) // going through userInput
     {
-      if (userInput.substring(i,i+1).matches("\\s+"))
+      if (userInput.substring(i,i+1).matches("\\s+")) // checking if the character is a whitespace 
       {
         spaceCount++;
       }
-      else if (userInput.substring(i,i+1).matches("[BCDFGHJKLMNPQRSTVWXYZbcdfghjklmnpqrstvwxyz]"))
+      else if (userInput.substring(i,i+1).matches("[BCDFGHJKLMNPQRSTVWXYZbcdfghjklmnpqrstvwxyz]")) // checking if it's a consonant
       {
         consCount++;
       }
-      else if (userInput.substring(i,i+1).matches("[AEIOU]||[aeiou]"))
+      else if (userInput.substring(i,i+1).matches("[AEIOU]||[aeiou]")) // checking if it's a vowel
       {
         vowelsCount++;
       }
-      else if (userInput.substring(i,i+1).matches("['():,_!.?\"';/*@~#]"))
+      else if (userInput.substring(i,i+1).matches("['():,_!.?\"';/*@~#]")) // checking if it's punctuation
       {
         punCount++;
       }
     }
     
+    // displaying the results
     System.out.println("Spaces Found: " + spaceCount);
     System.out.println("Punctuation Found: " + punCount);
     System.out.println("Consonants Found: " + consCount);
@@ -524,8 +525,8 @@ class StringUtilities_V2
     String foundPlaces = "";
     int foundSub = -1;
     System.out.println("What would you like to find in the subsring?");
-    searchFor = In.getString();
-    foundSub = userInput.indexOf(searchFor);
+    searchFor = In.getString(); 
+    foundSub = userInput.indexOf(searchFor); // checking if something was found
     
     if (foundSub > -1)
     {
@@ -533,11 +534,11 @@ class StringUtilities_V2
       String[] splitFound = userInput.split(searchFor);
       for (int c = 0; c <= splitFound.length - 1; c++)
       {
-          foundPlaces = foundPlaces.concat(splitFound[c] + searchFor + "~ ");
+          foundPlaces = foundPlaces.concat(splitFound[c] + searchFor + "~ "); // marking the locations of the searches
           foundPlaces = foundPlaces.trim();
       }  
       foundPlaces = foundPlaces.substring(0,(foundPlaces.length() - (searchFor.length() + 1)));
-      System.out.println(foundPlaces);
+      System.out.println(foundPlaces); // prints results
     }
     else
     {
@@ -549,21 +550,21 @@ class StringUtilities_V2
   public static void searchAndReplace (String userInput) {
     String searchFor;
     String replaceWith;
-    String newStatement;
+    String newStatement; 
     System.out.println("What would you like to find in the string?");
-    searchFor = In.getString();
+    searchFor = In.getString(); // seraching
     System.out.println("What would you like to replace it with?");
-    replaceWith = In.getString();
+    replaceWith = In.getString(); // replace with input
     newStatement = userInput.replaceAll(searchFor,replaceWith);
     
-    if (userInput.equals(newStatement))
+    if (userInput.equals(newStatement)) // checking if no changes were made
     {
-      System.out.println("\"" + searchFor + "\" was not found." );
+      System.out.println("\"" + searchFor + "\" was not found." ); 
     }
     else
-    {
+    { // printing old and new statement 
       System.out.println("Old Statement: " + userInput);
-      System.out.println("New Statement: " + newStatement + "\n");
+      System.out.println("New Statement: " + newStatement + "\n"); 
     }
     
   }
