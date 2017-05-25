@@ -249,7 +249,7 @@ class StringUtilities_V2
       }
       System.out.print(" "); // After reversing every letter in the word, adds a space for the next word
     }
-    System.out.println("\n\n");
+    System.out.println("\n");
   }
   
   // Method to reverse the words in each statement but keep the words' letters in the right order (Completed, Nabeel)
@@ -260,7 +260,7 @@ class StringUtilities_V2
       System.out.print(userInput.split("\\W")[i]);
       System.out.print(" "); // After reversing a word, adds a space for the next word
     }
-    System.out.println("\n\n");
+    System.out.println("\n");
   }
   
   // Method to capitalize every 2nd letter, alternate casing ex.HeLlO (Completed, Nabeel)
