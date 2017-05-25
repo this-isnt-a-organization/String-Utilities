@@ -265,14 +265,17 @@ class StringUtilities_V2
   
   // Method to capitalize every 2nd letter, alternate casing ex.HeLlO (Completed, Nabeel)
   public static void alternateCase (String userInput) {
-    int arrayLength = userInput.split("\\W").length; // Integer for the number of words that are in the statement
+    boolean upperCase = true;
+    
     for (int i=0; i<userInput.length(); i++) {
       if (userInput.charAt(i) >= 97 && userInput.charAt(i) <= 122 || userInput.charAt(i) >= 65 && userInput.charAt(i) <= 90) {
-        if ((i%2)==0) {
+        if (upperCase == true) {
           System.out.print(userInput.substring(i,i+1).toUpperCase());
+          upperCase = false;
         }
         else {
-          System.out.print(userInput.substring(i,i+1));
+          System.out.print(userInput.substring(i,i+1).toLowerCase());
+          upperCase = true;
         }
       }
       else {
